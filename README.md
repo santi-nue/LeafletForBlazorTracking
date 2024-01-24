@@ -15,4 +15,5 @@ The distances (meters) between the points are shown by a label displayed in the 
 ### Setting up the Blazor WebAssembly App project
 
 Adding the nugget:
-  dotnet add package LeafletForBlazor --version 2.0.2.2
+  
+    dotnet add package LeafletForBlazor --version 2.0.2.2
