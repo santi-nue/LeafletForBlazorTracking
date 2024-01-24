@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34221.43
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nearby Points Tracking distance", "Nearby Points Tracking distance\Nearby Points Tracking distance.csproj", "{920E85D9-AC2F-4310-B873-B03598EB3C61}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{920E85D9-AC2F-4310-B873-B03598EB3C61}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{920E85D9-AC2F-4310-B873-B03598EB3C61}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{920E85D9-AC2F-4310-B873-B03598EB3C61}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{920E85D9-AC2F-4310-B873-B03598EB3C61}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5AB06614-7FB3-4CA6-AC7D-D1D38C78FCE6}
+	EndGlobalSection
+EndGlobal
