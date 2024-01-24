@@ -11,3 +11,8 @@ In the image below you can see such an example:
 
 In the example, it was chosen that the positions (vehicles) that are close to each other should be highlighted in yellow and the distance between the positions (vehicles) should be displayed. 
 The distances (meters) between the points are shown by a label displayed in the middle of the measurement line. 
+
+### Setting up the Blazor WebAssembly App project
+
+Adding the nugget:
+  dotnet add package LeafletForBlazor --version 2.0.2.2
