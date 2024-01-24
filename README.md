@@ -20,6 +20,6 @@ Adding the nugget:
 
 We import the namespace provided by the package. In the _Import.razor page, add @using statement:
 
-    @using LeafletForBlaz
+    @using LeafletForBlazor
 
 
