@@ -22,5 +22,5 @@ We import the namespace provided by the package. In the _Import.razor page, add 
 
     @using LeafletForBlazor
 
-### Configuring the RealTimeMap control in the blazer page
+### Configuring the **RealTimeMap** control in the blazor page
 
