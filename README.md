@@ -17,3 +17,9 @@ The distances (meters) between the points are shown by a label displayed in the 
 Adding the nugget:
   
     dotnet add package LeafletForBlazor --version 2.0.2.2
+
+We import the namespace provided by the package. In the _Import.razor page, add @using statement:
+
+    @using LeafletForBlaz
+
+
