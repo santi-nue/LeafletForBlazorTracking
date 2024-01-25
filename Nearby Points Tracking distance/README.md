@@ -1,4 +1,4 @@
-# Nearby Points Tracking
+# Nearby Points Tracking distance
 
 ## Setting up the Blazor WebAssembly App project
 
