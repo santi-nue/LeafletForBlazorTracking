@@ -1,4 +1,4 @@
-# Nearby Points Tracking distance
+# Nearby Points Tracking
 
 ## Setting up the Blazor WebAssembly App project
 
@@ -136,7 +136,7 @@ We will use the **Display Polyline From Array** class to display the distance be
         {
             await realTimeMap.Geometric.DisplayPointsFromArray.deleteAll();
         });
-        defaultAppearace(); //default appearance
+
         Task.Run(async () =>
         {//we delete the measurement lines
             await realTimeMap.Geometric.DisplayPolylinesFromArray.deleteMeasure();
