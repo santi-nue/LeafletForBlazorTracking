@@ -126,7 +126,7 @@ We will use the **Display Polyline From Array** class to display the distance be
         }
     }
 
-## Remove highlight from the map
+## Remove highlight and measure lines
 
     public void nearbyThresholdTriggerClosed(object sender)
     {
