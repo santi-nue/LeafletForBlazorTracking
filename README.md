@@ -35,14 +35,17 @@ and event methods:
 
 1. When two or more points meet the condition:
 
-              public async void onNearbyThresholdTrigger(object sender, RealTimeMap.NearbyThresholdArgs args)
-              {
-              }
-2. When no point meets the condition:
+                    public async void onNearbyThresholdTrigger(object sender, RealTimeMap.NearbyThresholdArgs args)
+                    {
+                    }
 
-              public void nearbyThresholdTriggerClosed(object sender)
-              {
-              }
+**RealTimeMap.NearbyThresholdArgs args** will return tuples of nearby points and the distance between them 
+   
+3. When no point meets the condition:
+
+                    public void nearbyThresholdTriggerClosed(object sender)
+                    {
+                    }
 
 ---
 
