@@ -14,7 +14,9 @@ The distances (meters) between the points are shown by a label displayed in the 
 
 ### Writing code
 
-The Points class offers you the Analysis method, which allows configuring all tools for tracking and/or monitoring. The Analysis method creates a configurable object through properties.
+The Points class offers you the **Analysis()** method, which allows configuring all tools for tracking and/or monitoring. The Analysis method creates a configurable object through properties.In addition, the **Analisys()** method provides the possibility to limit the collection of tracked or monitored points by means of a predicate:
+
+
 
 #### Nearby Points Tracking
 
