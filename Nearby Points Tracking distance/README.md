@@ -49,3 +49,20 @@ We will use the Appearance() method offered by the Points class. For each catego
                };
           //and so one
        }
+
+## Setting up the Nearby Points Tracking tool
+
+
+           var analysis = realTimeMap.Geometric.Points.Analysis(item =>
+               item.type == "suspicious vehicle" ||
+               item.type == "intervention crew" ||
+               item.type == "police crew");
+               
+           analysis.nearby = new RealTimeMap.NearbyAnalysis()
+               {
+                   threshold = 35,
+                   unit = RealTimeMap.UnitOfMeasure.meters
+               };
+               
+           analysis.OnNearbyThresholdFired += onNearbyThresholdTrigger;
+           analysis.OnNearbyThresholdClosed += nearbyThresholdTriggerClosed;
