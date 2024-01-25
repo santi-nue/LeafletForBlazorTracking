@@ -70,6 +70,8 @@ We add the event methods of the analysis tool (without them, the analysis will n
            analysis.OnNearbyThresholdFired += onNearbyThresholdTrigger;
            analysis.OnNearbyThresholdClosed += nearbyThresholdTriggerClosed;
 
+events method:
+
        public void nearbyThresholdTriggerClosed(object sender)
        {
        }
