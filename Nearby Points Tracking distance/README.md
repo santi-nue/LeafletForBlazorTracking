@@ -11,3 +11,13 @@ We import the namespace provided by the package. In the _Import.razor page, add 
     @using LeafletForBlazor
 
 ## Configuring the **RealTimeMap** control in the blazor page
+
+We declare a variable reference to the RealTimeMap blazor control:
+
+  @code {
+      RealTimeMap? realTimeMap;
+        }
+
+We add the RealTimeMap blazor control:
+
+    <RealTimeMap @ref="realTimeMap" height="620px" width="820px"></RealTimeMap>
