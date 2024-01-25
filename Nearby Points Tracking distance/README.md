@@ -133,12 +133,12 @@ We will use the **Display Polyline From Array** class to display the distance be
         if (realTimeMap == null)
             return;
         Task.Run(async () =>
-        {
+        {//remove highlight point symbol
             await realTimeMap.Geometric.DisplayPointsFromArray.deleteAll();
         });
 
         Task.Run(async () =>
-        {//we delete the measurement lines
+        {//remove the measurement lines
             await realTimeMap.Geometric.DisplayPolylinesFromArray.deleteMeasure();
         });
 
