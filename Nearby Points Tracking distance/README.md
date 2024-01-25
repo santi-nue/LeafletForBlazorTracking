@@ -72,9 +72,14 @@ We add the event methods of the analysis tool (without them, the analysis will n
 
 events method:
 
-       public void nearbyThresholdTriggerClosed(object sender)
+1. the method will be triggered when two or more points reach the neaby condition (proximity threshold):
+
+       public async void onNearbyThresholdTrigger(object sender, RealTimeMap.NearbyThresholdArgs args)
        {
        }
-       public async void onNearbyThresholdTrigger(object sender, RealTimeMap.NearbyThresholdArgs args)
+
+3. the method will be triggered when there are not even two nearby points (proximity threshold):
+
+       public void nearbyThresholdTriggerClosed(object sender)
        {
        }
