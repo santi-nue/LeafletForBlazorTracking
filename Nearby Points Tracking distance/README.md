@@ -128,6 +128,9 @@ We will use the **Display Polyline From Array** class to display the distance be
 
 ## Remove highlight and measure lines
 
+
+Remove of highlight symbol and measurement lines will be done on the method triggered when no points are close to others.
+
     public void nearbyThresholdTriggerClosed(object sender)
     {
         if (realTimeMap == null)
