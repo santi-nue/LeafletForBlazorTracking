@@ -16,11 +16,33 @@ The distances (meters) between the points are shown by a label displayed in the 
 
 The Points class offers you the **Analysis()** method, which allows configuring all tools for tracking and/or monitoring. The Analysis method creates a configurable object through properties.In addition, the **Analisys()** method provides the possibility to limit the collection of tracked or monitored points by means of a predicate:
 
-
+          var analysis = realTimeMap.Geometric.Points.Analysis(
+                                item => item.type != "ambulance");
 
 #### Nearby Points Tracking
 
 Configuring the Nearby Points Tracking tool is done by configuring the **nearby** property and implementing the corresponding event methods: **OnNearbyThresholdFired** and **OnNearbyThresholdClosed**.
+
+           analysis.nearby = new RealTimeMap.NearbyAnalysis()
+               {
+                   threshold = 35,
+                   unit = RealTimeMap.UnitOfMeasure.meters
+               };
+           analysis.OnNearbyThresholdFired += onNearbyThresholdTrigger;
+           analysis.OnNearbyThresholdClosed += nearbyThresholdTriggerClosed;
+
+and event methods:
+
+1. When two or more points meet the condition:
+
+    public async void onNearbyThresholdTrigger(object sender, RealTimeMap.NearbyThresholdArgs args)
+    {
+    }
+2. When no point meets the condition:
+
+    public void nearbyThresholdTriggerClosed(object sender)
+    {
+    }
 
 ---
 
