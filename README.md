@@ -12,6 +12,14 @@ In the image below you can see such an example:
 In the example, it was chosen that the positions (vehicles) that are close to each other should be highlighted in yellow and the distance between the positions (vehicles) should be displayed. 
 The distances (meters) between the points are shown by a label displayed in the middle of the measurement line. 
 
+### Writing code
+
+The Points class offers you the Analysis method, which allows configuring all tools for tracking and/or monitoring. The Analysis method creates a configurable object through properties.
+
+Configuring the Nearby Points Tracking tool is done by configuring the **nearby** property and implementing the corresponding event methods: **** and ****.
+
+---
+
 ### Setting up the Blazor WebAssembly App project
 
 Adding the nugget:
