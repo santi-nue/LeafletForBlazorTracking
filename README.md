@@ -16,6 +16,8 @@ The distances (meters) between the points are shown by a label displayed in the 
 
 The Points class offers you the Analysis method, which allows configuring all tools for tracking and/or monitoring. The Analysis method creates a configurable object through properties.
 
+#### Nearby Points Tracking
+
 Configuring the Nearby Points Tracking tool is done by configuring the **nearby** property and implementing the corresponding event methods: **** and ****.
 
 ---
