@@ -85,3 +85,45 @@ events method:
        }
 
 ## Highlighting nearby points (vehicles).
+
+To highlight nearby points we will use two LeafletForBlazor classes: **DisplayPointsFromArray** and **DisplayPolylinesFromArray**.
+We will use the **DisplayPointsFromArray** class to highlight points located near each other.
+We will use the **Display Polyline From Array** class to display the distance between the points (which must be less than or equal to the threshold).
+
+    public async void onNearbyThresholdTrigger(object sender, RealTimeMap.NearbyThresholdArgs args)
+    {
+        if (realTimeMap == null)
+            return;
+        await realTimeMap.Geometric.DisplayPolylinesFromArray.deleteMeasure();  //we delete the measurement lines
+        await realTimeMap.Geometric.DisplayPointsFromArray.deleteAll();          //delete the Point (PointSymbol) displayed in the map for highlighting
+        if (args.tuples == null)
+            return;
+        foreach (var item in args.tuples)
+        {
+            if (item.tuple == null)
+                return;
+            //we highlight the points that are close (to each other)
+            await realTimeMap.Geometric.DisplayPointsFromArray.add(new double[2] { item.tuple.Item1.latitude, item.tuple.Item1.longitude }, new RealTimeMap.PointSymbol()
+                {
+                    color = "yellow",
+                    fillColor = "yellow",
+                    opacity = 0.8,
+                    fillOpacity = 0,
+                    radius = 12,
+                    weight = 2
+
+                });
+            //we add a measuring line with the distance
+            await realTimeMap.Geometric.DisplayPolylinesFromArray.addMeasure(new RealTimeMap.MeasureLine()
+                {
+                    start = new double[2] { item.tuple.Item1.latitude, item.tuple.Item1.longitude },
+                    end = new double[2] { item.tuple.Item2.latitude, item.tuple.Item2.longitude },
+                    text = $"{Math.Round(item.distance, 1).ToString()} m",
+                    textAnchor = new double[2] { -2, 8 },
+                    labelStyle = "min-width:40px;height:100%;background-color:#084886;border-radius:6px;color:#d2efff;text-align:center;font-size:10px;"
+
+                });
+        }
+    }
+
+
