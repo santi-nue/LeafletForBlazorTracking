@@ -21,3 +21,31 @@ We declare a variable reference to the RealTimeMap blazor control:
 We add the RealTimeMap blazor control:
 
     <RealTimeMap @ref="realTimeMap" height="620px" width="820px"></RealTimeMap>
+
+## Default symbolization of points
+
+We will use the Appearance() method offered by the Points class. For each category of points (vehicles) we will configure a distinct symbol:
+
+
+       if (realTimeMap != null)
+       {
+           realTimeMap.Geometric.Points.Appearance(item => item.type == "intervention crew", true).pattern = new RealTimeMap.PointSymbol()
+               {
+                   color = " #002e61",
+                   fillColor = "#00428c",
+                   fillOpacity = 0.8,
+                   weight = 2,
+                   opacity = 1,
+                   radius = 8
+               };
+           realTimeMap.Geometric.Points.Appearance(item => item.type == "suspicious vehicle").pattern = new RealTimeMap.PointSymbol()
+               {
+                   color = "#8f1204",
+                   fillColor = "#f6322b",
+                   fillOpacity = 0.5,
+                   weight = 2,
+                   opacity = 1,
+                   radius = 8
+               };
+          //and so one
+       }
