@@ -20,7 +20,7 @@ The Points class offers you the **Analysis()** method, which allows configuring 
 
 #### Nearby Points Tracking
 
-Configuring the Nearby Points Tracking tool is done by configuring the **nearby** property and implementing the corresponding event methods: **** and ****.
+Configuring the Nearby Points Tracking tool is done by configuring the **nearby** property and implementing the corresponding event methods: **OnNearbyThresholdFired** and **OnNearbyThresholdClosed**.
 
 ---
 
