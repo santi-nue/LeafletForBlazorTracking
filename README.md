@@ -49,5 +49,8 @@ and event methods:
                     {
                     }
 
+[more about Nearby Points Tracking distance](https://github.com/ichim/LeafletForBlazorTracking/tree/main/Nearby%20Points%20Tracking%20distance)
+
+
 ---
 
