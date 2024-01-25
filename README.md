@@ -21,7 +21,7 @@ The Points class offers you the **Analysis()** method, which allows configuring 
 
 The previous expression will remove "ambulances" from the Nearby Points Analysis.
 
-#### Nearby Points Tracking distance
+#### Nearby Points Tracking
 
 Configuring the Nearby Points Tracking tool is done by configuring the **nearby** property and implementing the corresponding event methods: **OnNearbyThresholdFired** and **OnNearbyThresholdClosed**.
 
