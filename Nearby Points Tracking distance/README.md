@@ -83,3 +83,5 @@ events method:
        public void nearbyThresholdTriggerClosed(object sender)
        {
        }
+
+## Highlighting nearby points (vehicles).
