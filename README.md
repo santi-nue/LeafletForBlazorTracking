@@ -4,7 +4,7 @@ _LeafletForBlazor nuget - Tracking and Monitoring points position (for IoT App)_
 One of the first tracking tools is Nearby Points Tracking.
 ## Nearby Points Tracking
 
-Nearby Points Tracking is a tool with which the user can be warned when two or more positions (vehicles) come close to each other. The approach of two or more positions (vehicles) has the effect of triggering a method that can issue alerts or highlight the positions (vehicles) on the map.
+This analysis tool can be configured to trigger whenever points (vehicles) from the map are close to each other at distances less than or equal to a threshold value. The approach of two or more positions (vehicles) has the effect of triggering a method that can issue alerts or highlight the positions (vehicles) on the map.
 In the image below you can see such an example:
 
 ![nearbyTrackingIoT22](https://github.com/ichim/LeafletForBlazorTracking/assets/8348463/46f3aac5-0141-47dd-b155-08f362408626)
