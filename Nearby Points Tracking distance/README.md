@@ -14,9 +14,9 @@ We import the namespace provided by the package. In the _Import.razor page, add 
 
 We declare a variable reference to the RealTimeMap blazor control:
 
-  @code {
-      RealTimeMap? realTimeMap;
-        }
+    @code {
+        RealTimeMap? realTimeMap;
+          }
 
 We add the RealTimeMap blazor control:
 
