@@ -126,4 +126,21 @@ We will use the **Display Polyline From Array** class to display the distance be
         }
     }
 
+## Remove highlight from the map
+
+    public void nearbyThresholdTriggerClosed(object sender)
+    {
+        if (realTimeMap == null)
+            return;
+        Task.Run(async () =>
+        {
+            await realTimeMap.Geometric.DisplayPointsFromArray.deleteAll();
+        });
+        defaultAppearace(); //default appearance
+        Task.Run(async () =>
+        {//we delete the measurement lines
+            await realTimeMap.Geometric.DisplayPolylinesFromArray.deleteMeasure();
+        });
+
+    }
 
