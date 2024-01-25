@@ -19,6 +19,8 @@ The Points class offers you the **Analysis()** method, which allows configuring 
           var analysis = realTimeMap.Geometric.Points.Analysis(
                                 item => item.type != "ambulance");
 
+The previous expression will remove "ambulances" from the Nearby Points Analysis.
+
 #### Nearby Points Tracking
 
 Configuring the Nearby Points Tracking tool is done by configuring the **nearby** property and implementing the corresponding event methods: **OnNearbyThresholdFired** and **OnNearbyThresholdClosed**.
@@ -39,7 +41,7 @@ and event methods:
                     {
                     }
 
-**RealTimeMap.NearbyThresholdArgs args** will return tuples of nearby points and the distance between them 
+**RealTimeMap.NearbyThresholdArgs args** will return tuples of nearby points and the distance between them. 
    
 3. When no point meets the condition:
 
