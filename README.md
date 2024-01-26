@@ -10,7 +10,7 @@ In the image below you can see such an example:
 ![nearbyTrackingIoT222](https://github.com/ichim/LeafletForBlazorTracking/assets/8348463/054201e0-af25-4cbb-8cc2-dbaa27701a30)
 
 
-In the example, it was chosen that the positions (vehicles) that are close to each other should be highlighted in yellow and the distance between the positions (vehicles) should be displayed. 
+In this example, it was chosen that the positions (vehicles) that are close to each other should be highlighted in yellow and the distance between the positions (vehicles) should be displayed. 
 The distances (meters) between the points are shown by a label displayed in the middle of the measurement line. 
 
 ### Writing code
