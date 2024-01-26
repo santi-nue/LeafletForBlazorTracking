@@ -55,7 +55,7 @@
                     fillOpacity = 0.8,
                     weight = 2,
                     opacity = 1,
-                    radius = 8
+                    radius = 10
                 };
             realTimeMap.Geometric.Points.Appearance(item => item.type == "suspicious vehicle").pattern = new RealTimeMap.PointSymbol()
                 {
@@ -64,7 +64,7 @@
                     fillOpacity = 0.5,
                     weight = 2,
                     opacity = 1,
-                    radius = 8
+                    radius = 10
                 };
             realTimeMap.Geometric.Points.Appearance(item => item.type == "ambulance").pattern = new RealTimeMap.PointSymbol()
                 {
@@ -73,7 +73,7 @@
                     fillOpacity = 0.5,
                     weight = 4,
                     opacity = 1,
-                    radius = 8
+                    radius = 10
                 };
             realTimeMap.Geometric.Points.Appearance(item => item.type == "police crew").pattern = new RealTimeMap.PointSymbol()
                 {
@@ -82,7 +82,7 @@
                     fillOpacity = 0.5,
                     weight = 2,
                     opacity = 1,
-                    radius = 8
+                    radius = 10
                 };
         }
     }
@@ -95,18 +95,16 @@
         {
             await realTimeMap.Geometric.DisplayPointsFromArray.deleteAll();
         });
-        defaultAppearace(); //default appearance
+       
         Task.Run(async () =>
         {//we delete the measurement lines
             await realTimeMap.Geometric.DisplayPolylinesFromArray.deleteMeasure();
         });
 
     }
-    int pas = 0;
+   
     public async void onNearbyThresholdTrigger(object sender, RealTimeMap.NearbyThresholdArgs args)
     {
-
-        defaultAppearace();
         if (realTimeMap == null)
             return;
         await realTimeMap.Geometric.DisplayPolylinesFromArray.deleteMeasure();
@@ -134,13 +132,12 @@
                     start = new double[2] { item.tuple.Item1.latitude, item.tuple.Item1.longitude },
                     end = new double[2] { item.tuple.Item2.latitude, item.tuple.Item2.longitude },
                     text = $"{Math.Round(item.distance, 1).ToString()} m",
-                    textAnchor = new double[2] { -2, 8 },
-                    labelStyle = "min-width:40px;height:100%;background-color:#084886;border-radius:6px;color:#d2efff;text-align:center;font-size:10px;"
+                    textAnchor = new double[2] { -4, 12 },
+                    labelStyle = "min-width:40px;height:100%;background-color:#084886;border-radius:6px;color:#d2efff;text-align:center;font-size:12px;opacity:0.6"
 
                 });
 
         }
-        pas++;
     }
     public async Task move()
     {//points movement simulator: data simulator/data.cs
