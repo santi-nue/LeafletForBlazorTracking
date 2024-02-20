@@ -1,15 +1,19 @@
 # LeafletForBlazor - Tracking and Monitoring points position
 _LeafletForBlazor nuget - Tracking and Monitoring points position (for IoT App)_
 ## Project description
-One of the first tracking tools is Nearby Points Tracking.
+Real-time tracking and analysis tools:
+
+1. **Nearby Points Tracking** - triggers methods that allow highlighting, displaying information or issuing alerts (to other users, for example other Arduino, Raspberry Pi clients)
+
 ## Nearby Points Tracking
 
 This analysis tool can be configured to trigger whenever points (vehicles) from the map are close to each other at distances less than or equal to a threshold value. The approach of two or more positions (vehicles) has the effect of triggering a method that can issue alerts or highlight the positions (vehicles) on the map.
 In the image below you can see such an example:
 
-![nearbyTrackingIoT22](https://github.com/ichim/LeafletForBlazorTracking/assets/8348463/46f3aac5-0141-47dd-b155-08f362408626)
+![nearbyTrackingIoT222](https://github.com/ichim/LeafletForBlazorTracking/assets/8348463/054201e0-af25-4cbb-8cc2-dbaa27701a30)
 
-In the example, it was chosen that the positions (vehicles) that are close to each other should be highlighted in yellow and the distance between the positions (vehicles) should be displayed. 
+
+In this example, it was chosen that the positions (vehicles) that are close to each other should be highlighted in yellow and the distance between the positions (vehicles) should be displayed. 
 The distances (meters) between the points are shown by a label displayed in the middle of the measurement line. 
 
 ### Writing code
